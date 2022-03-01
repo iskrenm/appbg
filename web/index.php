@@ -50,7 +50,17 @@
       </table>
 <?php
 print "<small><i>Served by: <b>".gethostname()."</b></i></small>\n";
+echo "Host IP:";
+$file = fopen("ip.txt","r");
+
+while(! feof($file))
+  {
+  echo fgets($file). "<br />";
+  }
+
+fclose($file);
 ?>
     </div>
   </body>
 </html>
+
